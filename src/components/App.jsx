@@ -1,10 +1,9 @@
 import React from 'react';
+import Home from './home/Home';
 
 const App = () => (
   <div className="wrapper">
-    <h1>
-      hello world
-    </h1>
+    <Home />
   </div>
 );
 

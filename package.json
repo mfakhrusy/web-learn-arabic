@@ -8,7 +8,7 @@
   "license": "MPL-2.0",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "./node_modules/.bin/mocha --require babel-register --require babel-polyfill --require tests/helpers/setup.js -w tests/helpers/browser.js tests/**/*.spec.jsx"
+    "test": "./node_modules/.bin/mocha --require babel-register --require babel-polyfill --require tests/helpers/setup.js -w tests/helpers/browser.js \"tests/**/*.spec.jsx\""
   },
   "dependencies": {
     "prop-types": "^15.6.1",

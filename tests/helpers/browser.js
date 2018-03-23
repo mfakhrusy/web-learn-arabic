@@ -1,13 +1,8 @@
-require('babel-register')();
-
-// const jsdom = require('jsdom').jsdom;
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
-
 const exposedProperties = ['window', 'navigator', 'document'];
 
-// global.document = jsdom('');
 const { document } = (new JSDOM('')).window;
 global.document = document;
 
