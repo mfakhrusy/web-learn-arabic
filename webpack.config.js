@@ -10,44 +10,48 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
       },
       {
         test: /\.js$/,
-        loader: 'eslint-loader',
         exclude: /node_modules/,
-      },
-      {
-        test: /\.jsx$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'eslint-loader',
+          },
+        ],
       },
       {
         test: /\.html$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'html-loader',
             options: { minimize: true },
           },
         ],
-        exclude: /node_modules/,
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           'style-loader',
           'css-loader',
           'sass-loader',
         ],
-        exclude: /node_modules/,
       },
     ],
   },
-  mode: 'development',
-  plugins: [HTMLWebpackPluginConfig],
   resolve: {
     extensions: ['.js', '.jsx'],
+    modules: ['node_modules', 'src'],
   },
+  mode: 'development',
+  plugins: [HTMLWebpackPluginConfig],
 };
