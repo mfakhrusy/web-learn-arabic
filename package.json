@@ -1,7 +1,17 @@
 {
-  "name": "web-learn-arabic-v2",
+  "name": "web-learn-arabic",
   "version": "0.1.0",
   "private": true,
+  "description": "An arabic learning platform for non-arab speakers.",
+  "author": {
+    "name": "Muhamad Fakhrusy",
+    "email": "fakhrusy.m@gmail.com",
+    "url": "https://mfakhrusy.github.io"
+  },
+  "license": "MPL-2.0",
+  "repository": {
+    "url": "https://github.com/mfakhrusy/web-learn-arabic.git"
+  },
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -45,6 +55,9 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-import-resolver-node": "^0.3.2",
@@ -67,7 +80,8 @@
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/enzymeSetup.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
