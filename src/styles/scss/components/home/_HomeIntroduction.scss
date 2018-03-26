@@ -1,15 +1,37 @@
 .HomeIntroduction {
-  height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 2fr 3fr;
-  grid-template-areas: 
-    "image header"
-    "image button";
+
+  @media #{$phone} {
+    background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
+    // background-size: cover;
+    grid-template-rows: 2fr 2fr 3fr;
+    grid-template-areas:
+    "header"
+    "button"
+    "image";
+    height: auto;
+    position: relative;
+  }
+
+  @media #{$desktop} {
+    background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+      "image header"
+      "image button";
+  }
 
   img {
-    height: 20rem;
+    height: 30rem;
     width: auto;
+    filter: drop-shadow(0 0rem 2rem rgb(187, 129, 95));
+    @media #{$phone} {
+      height: 20rem;
+      width: auto;
+    }
   }
 
   h1 {
@@ -19,19 +41,38 @@
 
 #HomeIntroduction-grid-item-1 {
   grid-area: header;
-  align-self: end;
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
+
+  @media #{$desktop} {
+    margin-bottom: 3rem;
+  }
+
+  @media #{$phone} {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 #HomeIntroduction-grid-item-2 {
   grid-area: image;
-  justify-self: end; // configure left or right
-  align-self: center; // configure top or bottom
+
+  @media #{$desktop} {
+    justify-self: end; // configure left or right
+    align-self: center; // configure top or bottom
+    padding-right: 3rem;
+  }
+
+  @media #{$phone} {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+  }
 }
 
 #HomeIntroduction-grid-item-3 {
@@ -40,4 +81,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  @media #{$desktop} {
+    margin-top: 3rem;
+  }
+
+  @media #{$phone} {
+    justify-content: center;
+  }
 }

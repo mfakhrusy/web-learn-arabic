@@ -22,11 +22,10 @@ h6 {
   padding: 0; }
 
 #root {
-  min-height: 100vh;
-  background: #643232; }
+  min-height: 100vh; }
 
 .Button {
-  width: 10rem;
+  width: 20rem;
   height: 4rem;
   border-radius: 2rem;
   display: flex;
@@ -35,37 +34,73 @@ h6 {
   cursor: pointer; }
 
 .Home {
-  min-height: 100vh; }
+  height: auto; }
 
-.HomeHeader {
-  height: 100vh; }
+@media only screen and (min-width: 768px) {
+  .HomeHeader {
+    height: 100vh; } }
+
+@media only screen and (max-width: 767px) {
+  .HomeHeader {
+    height: auto; } }
 
 .HomeIntroduction {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 2fr 3fr;
-  grid-template-areas: "image header" "image button"; }
+  display: grid; }
+  @media only screen and (max-width: 767px) {
+    .HomeIntroduction {
+      background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
+      grid-template-rows: 2fr 2fr 3fr;
+      grid-template-areas: "header" "button" "image";
+      height: auto;
+      position: relative; } }
+  @media only screen and (min-width: 768px) {
+    .HomeIntroduction {
+      background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
+      background-size: cover;
+      height: 100vh;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 2fr 3fr;
+      grid-template-areas: "image header" "image button"; } }
   .HomeIntroduction img {
-    height: 20rem;
-    width: auto; }
+    height: 30rem;
+    width: auto;
+    filter: drop-shadow(0 0rem 2rem #bb815f); }
+    @media only screen and (max-width: 767px) {
+      .HomeIntroduction img {
+        height: 20rem;
+        width: auto; } }
   .HomeIntroduction h1 {
     font-size: 30pt; }
 
 #HomeIntroduction-grid-item-1 {
   grid-area: header;
-  align-self: end;
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 768px) {
+    #HomeIntroduction-grid-item-1 {
+      margin-bottom: 3rem; } }
+  @media only screen and (max-width: 767px) {
+    #HomeIntroduction-grid-item-1 {
+      justify-content: center;
+      text-align: center; } }
 
 #HomeIntroduction-grid-item-2 {
-  grid-area: image;
-  justify-self: end;
-  align-self: center; }
+  grid-area: image; }
+  @media only screen and (min-width: 768px) {
+    #HomeIntroduction-grid-item-2 {
+      justify-self: end;
+      align-self: center;
+      padding-right: 3rem; } }
+  @media only screen and (max-width: 767px) {
+    #HomeIntroduction-grid-item-2 {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0; } }
 
 #HomeIntroduction-grid-item-3 {
   grid-area: button;
@@ -73,3 +108,9 @@ h6 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center; }
+  @media only screen and (min-width: 768px) {
+    #HomeIntroduction-grid-item-3 {
+      margin-top: 3rem; } }
+  @media only screen and (max-width: 767px) {
+    #HomeIntroduction-grid-item-3 {
+      justify-content: center; } }
