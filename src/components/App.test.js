@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MemoryRouter } from 'react-router-dom'; // so the test on App will success
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import App from 'components/App';
@@ -10,7 +11,12 @@ describe('<App />', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>,
+      div,
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 

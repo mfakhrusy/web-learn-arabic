@@ -1,8 +1,9 @@
 import React from 'react';
+import HomeHeader from 'components/home/HomeHeader';
 
 const Home = () => (
   <div className="Home">
-    <h1>Home</h1>
+    <HomeHeader />
   </div>
 );
 
