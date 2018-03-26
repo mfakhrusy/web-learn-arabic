@@ -1,0 +1,43 @@
+.HomeIntroduction {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: 
+    "image header"
+    "image button";
+
+  img {
+    height: 20rem;
+    width: auto;
+  }
+
+  h1 {
+    font-size: 30pt;
+  }
+}
+
+#HomeIntroduction-grid-item-1 {
+  grid-area: header;
+  align-self: end;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+#HomeIntroduction-grid-item-2 {
+  grid-area: image;
+  justify-self: end; // configure left or right
+  align-self: center; // configure top or bottom
+}
+
+#HomeIntroduction-grid-item-3 {
+  grid-area: button;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

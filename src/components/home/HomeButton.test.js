@@ -12,6 +12,7 @@ describe('<HomeButton />', () => {
       onClick={sinon.spy()}
       type="normal"
       color="#ffffff"
+      id="1"
     >
       <p>test</p>
     </HomeButton>,
