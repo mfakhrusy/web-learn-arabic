@@ -1,9 +1,7 @@
 .HomeIntroduction {
-  display: grid;
+  @include display-grid;
 
   @media #{$phone} {
-    background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
-    // background-size: cover;
     grid-template-rows: 2fr 2fr 3fr;
     grid-template-areas:
     "header"
@@ -14,11 +12,10 @@
   }
 
   @media #{$desktop} {
-    background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
-    background-size: cover;
     height: 100vh;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 2fr 3fr;
+    grid-row-gap: 6rem;
     grid-template-areas: 
       "image header"
       "image button";
@@ -47,10 +44,6 @@
   flex-direction: column;
   box-sizing: border-box;
 
-  @media #{$desktop} {
-    margin-bottom: 3rem;
-  }
-
   @media #{$phone} {
     justify-content: center;
     text-align: center;
@@ -63,7 +56,7 @@
   @media #{$desktop} {
     justify-self: end; // configure left or right
     align-self: center; // configure top or bottom
-    padding-right: 3rem;
+    padding-right: 10rem;
   }
 
   @media #{$phone} {
@@ -81,10 +74,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  @media #{$desktop} {
-    margin-top: 3rem;
-  }
 
   @media #{$phone} {
     justify-content: center;

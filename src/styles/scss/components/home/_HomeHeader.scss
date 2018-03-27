@@ -5,4 +5,15 @@
   @media #{$phone} {
     height: auto;
   }
+
+  @media #{$phone} {
+    background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
+    // background-size: cover;
+  }
+
+  @media #{$desktop} {
+    background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
+    background-size: cover;
+  }
+
 }

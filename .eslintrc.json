@@ -13,7 +13,8 @@
   ],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/forbid-prop-types": ["error", { "forbid": ["any"] }]
+    "react/forbid-prop-types": ["error", { "forbid": ["any"] }],
+    "react/no-array-index-key": 0
   },
   "settings": {
     "import/resolver": {

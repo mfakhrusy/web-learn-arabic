@@ -1,0 +1,27 @@
+.HomeDescription {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 100%;
+  background: linear-gradient($backgroundcolor-home-2, $backgroundcolor-home-1);
+
+  img {
+    height: 10rem;
+    width: auto;
+    overflow: hidden;
+
+    @media #{$desktop} {
+      height: 30rem;
+      width: auto;
+    }
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$desktop} {
+      font-size: 40pt;
+    }
+  }
+}

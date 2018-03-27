@@ -44,22 +44,30 @@ h6 {
   .HomeHeader {
     height: auto; } }
 
+@media only screen and (max-width: 767px) {
+  .HomeHeader {
+    background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center; } }
+
+@media only screen and (min-width: 768px) {
+  .HomeHeader {
+    background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
+    background-size: cover; } }
+
 .HomeIntroduction {
-  display: grid; }
+  display: grid;
+  display: -ms-grid; }
   @media only screen and (max-width: 767px) {
     .HomeIntroduction {
-      background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
       grid-template-rows: 2fr 2fr 3fr;
       grid-template-areas: "header" "button" "image";
       height: auto;
       position: relative; } }
   @media only screen and (min-width: 768px) {
     .HomeIntroduction {
-      background: url(https://s25.postimg.org/c7166bojj/grid-3227459-mirrored.jpg) no-repeat center;
-      background-size: cover;
       height: 100vh;
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 2fr 3fr;
+      grid-row-gap: 6rem;
       grid-template-areas: "image header" "image button"; } }
   .HomeIntroduction img {
     height: 30rem;
@@ -79,9 +87,6 @@ h6 {
   align-items: center;
   flex-direction: column;
   box-sizing: border-box; }
-  @media only screen and (min-width: 768px) {
-    #HomeIntroduction-grid-item-1 {
-      margin-bottom: 3rem; } }
   @media only screen and (max-width: 767px) {
     #HomeIntroduction-grid-item-1 {
       justify-content: center;
@@ -93,7 +98,7 @@ h6 {
     #HomeIntroduction-grid-item-2 {
       justify-self: end;
       align-self: center;
-      padding-right: 3rem; } }
+      padding-right: 10rem; } }
   @media only screen and (max-width: 767px) {
     #HomeIntroduction-grid-item-2 {
       width: 100%;
@@ -108,9 +113,86 @@ h6 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center; }
-  @media only screen and (min-width: 768px) {
-    #HomeIntroduction-grid-item-3 {
-      margin-top: 3rem; } }
   @media only screen and (max-width: 767px) {
     #HomeIntroduction-grid-item-3 {
       justify-content: center; } }
+
+.HomeLevelSelection {
+  display: grid;
+  display: -ms-grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "level-1" "level-2" "level-3" "level-4"; }
+  .HomeLevelSelection > div {
+    justify-self: center; }
+  @media only screen and (min-width: 768px) {
+    .HomeLevelSelection {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "level-1 level-2" "level-3 level-4";
+      height: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .HomeLevelSelection {
+      grid-row-gap: 0.3rem; } }
+
+#HomeLevelSelection-grid-item-1 {
+  grid-area: level-1; }
+  @media only screen and (min-width: 768px) {
+    #HomeLevelSelection-grid-item-1 {
+      justify-self: end;
+      align-self: end; } }
+
+#HomeLevelSelection-grid-item-2 {
+  grid-area: level-2; }
+  @media only screen and (min-width: 768px) {
+    #HomeLevelSelection-grid-item-2 {
+      justify-self: start;
+      align-self: end; } }
+
+#HomeLevelSelection-grid-item-3 {
+  grid-area: level-3; }
+  @media only screen and (min-width: 768px) {
+    #HomeLevelSelection-grid-item-3 {
+      justify-self: end;
+      align-self: start; } }
+
+#HomeLevelSelection-grid-item-4 {
+  grid-area: level-4; }
+  @media only screen and (min-width: 768px) {
+    #HomeLevelSelection-grid-item-4 {
+      justify-self: start;
+      align-self: start; } }
+
+.LevelItem {
+  height: 17rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff; }
+  @media only screen and (min-width: 768px) {
+    .LevelItem {
+      height: 25rem;
+      width: 25rem; } }
+
+.HomeDescription {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 100%;
+  background: linear-gradient(#E5E5E5, #acacac); }
+  .HomeDescription img {
+    height: 10rem;
+    width: auto;
+    overflow: hidden; }
+    @media only screen and (min-width: 768px) {
+      .HomeDescription img {
+        height: 30rem;
+        width: auto; } }
+  .HomeDescription p {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (min-width: 768px) {
+      .HomeDescription p {
+        font-size: 40pt; } }

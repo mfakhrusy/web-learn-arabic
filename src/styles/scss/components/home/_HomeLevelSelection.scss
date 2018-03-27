@@ -1,0 +1,60 @@
+.HomeLevelSelection {
+  @include display-grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "level-1"
+  "level-2"
+  "level-3"
+  "level-4";
+
+  > div {
+    justify-self: center;
+  }
+
+  @media #{$desktop} {
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "level-1 level-2"
+  "level-3 level-4";
+
+  height: 100%;
+  }
+
+  @media #{$phone} {
+    grid-row-gap: 0.3rem;
+  }
+}
+
+#HomeLevelSelection-grid-item-1 {
+  grid-area: level-1;
+
+  @media #{$desktop} {
+    justify-self: end;
+    align-self: end;
+  }
+}
+
+#HomeLevelSelection-grid-item-2 {
+  grid-area: level-2;
+  @media #{$desktop} {
+    justify-self: start;
+    align-self: end;
+  }
+}
+
+#HomeLevelSelection-grid-item-3 {
+  grid-area: level-3;
+  @media #{$desktop} {
+    justify-self: end;
+    align-self: start;
+  }
+}
+
+#HomeLevelSelection-grid-item-4 {
+  grid-area: level-4;
+  @media #{$desktop} {
+    justify-self: start;
+    align-self: start;
+  }
+}

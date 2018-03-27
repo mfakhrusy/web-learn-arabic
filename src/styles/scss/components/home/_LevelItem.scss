@@ -1,0 +1,14 @@
+.LevelItem {
+  height: 17rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($basecolor-black, 0.75);
+  color: $basecolor-white;
+
+  @media #{$desktop} {
+    height: 25rem;
+    width: 25rem;
+  }
+}
