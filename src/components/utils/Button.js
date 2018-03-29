@@ -23,10 +23,14 @@ const Button = ({
   );
 };
 
+Button.defaultProps = {
+  color: 'default',
+};
+
 Button.propTypes = {
   children: PropTypes.element.isRequired,
   onClick: PropTypes.func.isRequired,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
 export default Button;

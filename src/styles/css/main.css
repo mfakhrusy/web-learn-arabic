@@ -31,7 +31,8 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: #989898; }
 
 .Home {
   height: auto; }
@@ -196,3 +197,46 @@ h6 {
     @media only screen and (min-width: 768px) {
       .HomeDescription p {
         font-size: 40pt; } }
+
+.HomeFooter {
+  display: grid;
+  display: -ms-grid;
+  grid-row-gap: 2rem;
+  grid-template-rows: 1fr 1fr 5fr;
+  grid-template-areas: "title" "button" "details";
+  background-color: #acacac; }
+  .HomeFooter > div {
+    width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .HomeFooter {
+      grid-template-rows: 2fr 3fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "title title title button button button" "details details details details details details"; } }
+
+#HomeFooter-grid-item-1 {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#HomeFooter-grid-item-2 {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#HomeFooter-grid-item-3 {
+  grid-area: details;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.FooterItem {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .FooterItem ul {
+    list-style-type: none;
+    padding: 0; }

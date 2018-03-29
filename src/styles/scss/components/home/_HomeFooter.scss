@@ -1,0 +1,43 @@
+.HomeFooter {
+  @include display-grid;
+  grid-row-gap: 2rem;
+  grid-template-rows: 1fr 1fr 5fr;
+  grid-template-areas:
+  "title"
+  "button"
+  "details";
+  background-color: $backgroundcolor-footer;
+  > div {
+    width: 100%;
+  }
+
+  @media #{$desktop} {
+    grid-template-rows: 2fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "title title title button button button"
+    "details details details details details details";
+  }
+
+}
+
+#HomeFooter-grid-item-1 {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#HomeFooter-grid-item-2 {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#HomeFooter-grid-item-3 {
+  grid-area: details;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
