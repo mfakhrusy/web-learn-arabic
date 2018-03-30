@@ -1,3 +1,5 @@
 .Home {
   height: auto;
+  position: relative; // so top property can work
+  top: $height-navigation-bar;
 }

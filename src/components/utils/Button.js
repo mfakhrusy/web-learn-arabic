@@ -18,7 +18,7 @@ const Button = ({
       onKeyPress={onClick}
       style={color !== 'default' ? { backgroundColor: color } : {}}
     >
-      {children}
+      {React.cloneElement(children, { test: 'tessst' })}
     </div>
   );
 };

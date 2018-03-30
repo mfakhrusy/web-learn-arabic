@@ -35,7 +35,23 @@ h6 {
   background-color: #989898; }
 
 .Home {
-  height: auto; }
+  height: auto;
+  position: relative;
+  top: 3rem; }
+
+.NavigationBar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  height: 3rem;
+  z-index: 5;
+  background-color: #beffe6;
+  align-items: center; }
+  .NavigationBar :first-child,
+  .NavigationBar :last-child {
+    margin: 0 2rem; }
 
 @media only screen and (min-width: 768px) {
   .HomeHeader {

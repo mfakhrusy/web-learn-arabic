@@ -1,0 +1,16 @@
+.NavigationBar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0; // to make it stay on top, hack? nope!
+  height: $height-navigation-bar;
+  z-index: $z-index-navigation-bar;
+  background-color: $backgroundcolor-navigation-bar;
+  align-items: center;
+
+  & :first-child,
+  & :last-child {
+    margin: 0 2rem;
+  }
+}
